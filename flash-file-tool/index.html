@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from repairmymobile.in/flash-file-tool/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Aug 2020 16:35:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head ><meta charset="UTF-8" />
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;__ez.queue=(function(){var count=0,incr=0,items=[],timeDelayFired=false,hpItems=[],lpItems=[],allowLoad=true;var obj={func:function(name,funcName,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError){var self=this;this.name=name;this.funcName=funcName;this.parameters=parameters===null?null:(parameters instanceof Array)?parameters:[parameters];this.isBlock=isBlock;this.blockedBy=blockedBy;this.deleteWhenComplete=deleteWhenComplete;this.isError=false;this.isComplete=false;this.isInitialized=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){log("... func = "+name);self.isInitialized=true;self.isComplete=true;log("... func.apply: "+name);var funcs=self.funcName.split('.');var func=null;if(funcs.length>3){}else if(funcs.length===3){func=window[funcs[0]][funcs[1]][funcs[2]];}else if(funcs.length===2){func=window[funcs[0]][funcs[1]];}else{func=window[self.funcName];}
+if(typeof func!=='undefined'&&func!==null){func.apply(null,this.parameters);}
+if(self.deleteWhenComplete===true)delete items[name];if(self.isBlock===true){log("----- F'D: "+self.name);processAll();}}},file:function(name,path,isBlock,blockedBy,async,defer,proceedIfError){var self=this;this.name=name;this.path=path;this.async=async;this.defer=defer;this.isBlock=isBlock;this.blockedBy=blockedBy;this.isInitialized=false;this.isError=false;this.isComplete=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){self.isInitialized=true;log("... file = "+name);var scr=document.createElement('script');scr.src=path;if(async===true)scr.async=true;else if(defer===true)scr.defer=true;scr.onerror=function(){log("----- ERR'D: "+self.name);self.isError=true;if(self.isBlock===true){processAll();}};scr.onreadystatechange=scr.onload=function(){var state=scr.readyState;log("----- F'D: "+self.name);if((!state||/loaded|complete/.test(state))){self.isComplete=true;if(self.isBlock===true){processAll();}}};document.getElementsByTagName('head')[0].appendChild(scr);}}};function init(){window.addEventListener("load",function(){setTimeout(function(){timeDelayFired=true;log('TDELAY -----');processAll();},5000);},false);}
+function addFile(name,path,isBlock,blockedBy,async,defer,proceedIfError,priority){var item=new obj.file(name,path,isBlock,blockedBy,async,defer,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function setallowLoad(settobool){allowLoad=settobool}
+function addFunc(name,func,parameters,isBlock,blockedBy,autoInc,deleteWhenComplete,proceedIfError,priority){if(autoInc===true)name=name+"_"+incr++;var item=new obj.func(name,func,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFile(name,path){var item=new obj.file(name,path,false,[],false,false,true);item.isTimeDelay=true;log(name+' ... '+' FILE! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFunc(name,func,parameters){var item=new obj.func(name,func,parameters,false,[],true,true);item.isTimeDelay=true;log(name+' ... '+' FUNCTION! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function checkIfBlocked(item){if(isBlocked(item)===true||allowLoad==false)return;item.process();}
+function isBlocked(item){if(item.isTimeDelay===true&&timeDelayFired===false){log(item.name+" blocked = TIME DELAY!");return true;}
+if(item.blockedBy instanceof Array){for(var i=0;i<item.blockedBy.length;i++){var block=item.blockedBy[i];if(items.hasOwnProperty(block)===false){log(item.name+" blocked = "+block);return true;}else if(item.proceedIfError===true&&items[block].isError===true){return false;}else if(items[block].isComplete===false){log(item.name+" blocked = "+block);return true;}}}
+return false;}
+function log(msg){var href=window.location.href;var reg=new RegExp('[?&]ezq=([^&#]*)','i');var string=reg.exec(href);var res=string?string[1]:null;if(res==="1")console.debug(msg);}
+function processAll(){count++;if(count>200)return;log("let's go");processItems(hpItems);processItems(lpItems);}
+function processItems(list){for(var i in list){if(list.hasOwnProperty(i)===false)continue;var item=list[i];if(item.isComplete===true||isBlocked(item)||item.isInitialized===true||item.isError===true){if(item.isError===true){log(item.name+': error')}else if(item.isComplete===true){log(item.name+': complete already')}else if(item.isInitialized===true){log(item.name+': initialized already')}}else{item.process();}}}
+init();return{addFile:addFile,addDelayFile:addTimeDelayFile,addFunc:addFunc,addDelayFunc:addTimeDelayFunc,items:items,processAll:processAll,setallowLoad:setallowLoad};})();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.queue.addFile('../detroitchicago/boise.js', '../detroitchicago/boise955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);__ez.dot={};__ez.queue.addFile('../detroitchicago/memphis.js', '../detroitchicago/memphis955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);__ez.queue.addFile('../detroitchicago/minneapolis.js', '../detroitchicago/minneapolis955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);__ez.vep=(function(){var pixels=[],pxURL="../detroitchicago/grapefruit.gif";function AddPixel(vID,pixelData){if(__ez.dot.isDefined(vID)&&__ez.dot.isValid(pixelData)){pixels.push({type:'video',video_impression_id:vID,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(pixelData)});}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender"){return;}
+if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
+var pushPixels=pixels.splice(0,j);(new Image()).src=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&v="+btoa(JSON.stringify(pushPixels));}}
+pixels=[];}
+return{Add:AddPixel,Fire:Fire};})();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.pel=(function(){var pixels=[],pxURL="../porpoiseant/army.gif";function AddAndFirePixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0);Fire();}
+function GetCurrentPixels(){return pixels;}
+function AddPixel(adSlot,pixelData,revenue,est_revenue,bid_floor_filled,bid_floor_prev,stat_source_id){if(!__ez.dot.isDefined(adSlot)||__ez.dot.isAnyDefined(adSlot.getSlotElementId,adSlot.ElementId)==false){return;}
+var ad_position_id=parseInt(__ez.dot.getTargeting(adSlot,'ap'));var impId=__ez.dot.getSlotIID(adSlot),adUnit=__ez.dot.getAdUnit(adSlot);var compId=parseInt(__ez.dot.getTargeting(adSlot,"compid"));var lineItemId=0;var creativeId=0;var ezimData=getEzimData(adSlot);if(typeof ezimData=='object'){if(ezimData.creative_id!==undefined){creativeId=ezimData.creative_id;}
+if(ezimData.line_item_id!==undefined){lineItemId=ezimData.line_item_id;}}
+if(__ez.dot.isDefined(impId,adUnit)&&__ez.dot.isValid(pixelData)){pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),revenue:revenue,est_revenue:est_revenue,ad_position:ad_position_id,ad_size:"",bid_floor_filled:bid_floor_filled,bid_floor_prev:bid_floor_prev,stat_source_id:stat_source_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:compId,line_item_id:lineItemId,creative_id:creativeId,data:__ez.dot.dataToStr(pixelData)});}}
+function AddPixelById(impFullId,pixelData){var vals=impFullId.split('../index.html');if(__ez.dot.isDefined(impFullId)&&vals.length===3&&__ez.dot.isValid(pixelData)){var adUnit=vals[0],impId=vals[2];pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(pixelData)});}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender")return;if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
+var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&sts="+btoa(JSON.stringify(pushPixels));if(typeof window.isAmp!=='undefined'&&isAmp&&typeof window._ezaq!=='undefined'&&_ezaq.hasOwnProperty("domain_id")){pixelURL+="&visit_uuid="+_ezaq['visit_uuid'];}
+(new Image()).src=pixelURL;}}
+pixels=[];}
+function getEzimData(adSlot){if(typeof _ezim_d=="undefined"){return false}
+var adUnitName=__ez.dot.getAdUnitPath(adSlot).split('../index.html').pop();if(typeof _ezim_d==='object'&&_ezim_d.hasOwnProperty(adUnitName)){return _ezim_d[adUnitName];}
+for(var ezimKey in _ezim_d){if(ezimKey.split('../index.html').pop()===adUnitName){return _ezim_d[ezimKey];}}
+return false;}
+return{Add:AddPixel,AddAndFire:AddAndFirePixel,AddById:AddPixelById,Fire:Fire,GetPixels:GetCurrentPixels,};})();__ez.queue.addFile('../detroitchicago/raleigh.js', '../detroitchicago/raleigh955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);__ez.queue.addFile('../detroitchicago/tampa.js', '../detroitchicago/tampa955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);</script>
+<script data-ezscrex="false" data-cfasync="false">(function(){if("function"===typeof window.CustomEvent)return!1;window.CustomEvent=function(c,a){a=a||{bubbles:!1,cancelable:!1,detail:null};var b=document.createEvent("CustomEvent");b.initCustomEvent(c,a.bubbles,a.cancelable,a.detail);return b}})();</script><script data-ezscrex="false" data-cfasync="false">__ez.queue.addFile('../detroitchicago/tulsa.js', '../detroitchicago/tulsa4d7f.js?gcb=191-1&amp;cb=2', false, [], true, false, true, false);</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Download Android Flash File (Stock ROM) - RepairMyMobile.in</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v13.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="More than 60 Brands of Mobile Phone Flash File has been listed which includes more than 30000 model file has been listed."/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Download Android Flash File (Stock ROM) - RepairMyMobile.in" />
+<meta property="og:description" content="More than 60 Brands of Mobile Phone Flash File has been listed which includes more than 30000 model file has been listed." />
+<meta property="og:url" content="https://repairmymobile.in/flash-file-tool/" />
+<meta property="og:site_name" content="RepairMyMobile.in" />
+<meta property="article:publisher" content="https://www.facebook.com/RepairMyMobile.in/" />
+<meta property="og:image" content="https://repairmymobile.in/wp-content/uploads/2020/08/logo200200.jpg" />
+<meta property="og:image:secure_url" content="https://repairmymobile.in/wp-content/uploads/2020/08/logo200200.jpg" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="More than 60 Brands of Mobile Phone Flash File has been listed which includes more than 30000 model file has been listed." />
+<meta name="twitter:title" content="Download Android Flash File (Stock ROM) - RepairMyMobile.in" />
+<meta name="twitter:site" content="@repairmy_mobile" />
+<meta name="twitter:image" content="https://repairmymobile.in/wp-content/uploads/2020/08/logo200200.jpg" />
+<meta name="twitter:creator" content="@repairmy_mobile" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://repairmymobile.in/#website","url":"https://repairmymobile.in/","name":"RepairMyMobile.in","inLanguage":"en-US","description":"One Stop Solution for Mobile Repair","potentialAction":[{"@type":"SearchAction","target":"https://repairmymobile.in/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"ImageObject","@id":"https://repairmymobile.in/flash-file-tool/#primaryimage","inLanguage":"en-US","url":"https://repairmymobile.in/wp-content/uploads/2020/08/logo200200.jpg","width":200,"height":200},{"@type":"WebPage","@id":"https://repairmymobile.in/flash-file-tool/#webpage","url":"https://repairmymobile.in/flash-file-tool/","name":"Download Android Flash File (Stock ROM) - RepairMyMobile.in","isPartOf":{"@id":"https://repairmymobile.in/#website"},"inLanguage":"en-US","primaryImageOfPage":{"@id":"https://repairmymobile.in/flash-file-tool/#primaryimage"},"datePublished":"2018-04-13T06:29:30+00:00","dateModified":"2020-03-04T06:31:49+00:00","description":"More than 60 Brands of Mobile Phone Flash File has been listed which includes more than 30000 model file has been listed.","potentialAction":[{"@type":"ReadAction","target":["https://repairmymobile.in/flash-file-tool/"]}]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="amphtml" href="amp/index.html" /><meta name="generator" content="AMP for WP 1.0.42"/><link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="RepairMyMobile.in &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="RepairMyMobile.in &raquo; Comments Feed" href="../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/repairmymobile.in\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="aiko-theme-css" href="../src/wp-content/themes/aiko-master/styledbc2.css?ver=2.2.6" type="text/css" media="all"/>
+<link rel="stylesheet" id="wp-block-library-css" href="../src/wp-includes/css/dist/block-library/style.min7661.css?ver=5.4.2" type="text/css" media="all"/>
+<link rel="stylesheet" id="wc-block-style-css" href="../src/wp-content/plugins/woo-gutenberg-products-block/build/style737b.css?ver=2.5.15" type="text/css" media="all"/>
+<link rel="stylesheet" id="contact-form-7-css" href="../src/wp-content/plugins/contact-form-7/includes/css/styles6725.css?ver=5.1.7" type="text/css" media="all"/>
+<link rel="stylesheet" id="ezoic-integration-css" href="../src/wp-content/plugins/ezoic-integration/public/css/ezoic-integration-publice34c.css?ver=1.3.5" type="text/css" media="all"/>
+<link rel="stylesheet" id="woocommerce-layout-css" href="../src/wp-content/plugins/woocommerce/assets/css/woocommerce-layoutf39e.css?ver=4.0.1" type="text/css" media="all"/>
+<link rel="stylesheet" id="woocommerce-smallscreen-css" href="../src/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreenf39e.css?ver=4.0.1" type="text/css" media="only screen and (max-width: 768px)"/>
+<link rel="stylesheet" id="woocommerce-general-css" href="../src/wp-content/plugins/woocommerce/assets/css/woocommercef39e.css?ver=4.0.1" type="text/css" media="all"/>
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='google-fonts-css'  href='http://fonts.googleapis.com/css?family=PT+Sans%7CPT+Serif&amp;ver=2.2.6' type='text/css' media='all' />
+<link rel="stylesheet" id="dashicons-css" href="../src/wp-includes/css/dashicons.min7661.css?ver=5.4.2" type="text/css" media="all"/>
+<link rel="stylesheet" id="elementor-icons-css" href="../src/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min4c7e.css?ver=5.6.2" type="text/css" media="all"/>
+<link rel="stylesheet" id="elementor-animations-css" href="../src/wp-content/plugins/elementor/assets/lib/animations/animations.min4315.css?ver=2.9.8" type="text/css" media="all"/>
+<link rel="stylesheet" id="elementor-frontend-css" href="../src/wp-content/plugins/elementor/assets/css/frontend.min4315.css?ver=2.9.8" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-5-all-css" href="../src/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min4315.css?ver=2.9.8" type="text/css" media="all"/>
+<link rel="stylesheet" id="font-awesome-4-shim-css" href="../src/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min4315.css?ver=2.9.8" type="text/css" media="all"/>
+<link rel="stylesheet" id="elementor-post-3834-css" href="../src/wp-content/uploads/elementor/css/post-3834e85b.css?ver=1588160546" type="text/css" media="all"/>
+<link rel="stylesheet" id="addtoany-css" href="../src/wp-content/plugins/add-to-any/addtoany.min9be6.css?ver=1.15" type="text/css" media="all"/>
+<link rel="stylesheet" id="forget-about-shortcode-buttons-css" href="../src/wp-content/plugins/forget-about-shortcode-buttons/public/css/button-styles431f.css?ver=2.1.2" type="text/css" media="all"/>
+<script type="text/javascript" src="../src/wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp"></script>
+<script type="text/javascript" src="../src/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1"></script>
+<script type="text/javascript" src="../src/wp-content/plugins/add-to-any/addtoany.min4963.js?ver=1.1"></script>
+<script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min4315.js?ver=2.9.8"></script>
+      
+
+
+		<link rel='https://api.w.org/' href='../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4.2" />
+<meta name="generator" content="WooCommerce 4.0.1" />
+<link rel='shortlink' href='../index4d24.html?p=3834' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed7329.json?url=https%3A%2F%2Frepairmymobile.in%2Fflash-file-tool%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed5c04?url=https%3A%2F%2Frepairmymobile.in%2Fflash-file-tool%2F&amp;format=xml" />
+
+<script data-cfasync="false">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="../../static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
+</script>
+<script type="text/javascript">var ajaxurl = "https://repairmymobile.in/wp-admin/admin-ajax.php";</script><script type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "https://repairmymobile.in/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.6.4';
+	window._wp_rp_post_id = '3834';
+	window._wp_rp_num_rel_posts = '4';
+	window._wp_rp_thumbnails = true;
+	window._wp_rp_post_title = 'Download+Android+Flash+File+%28Stock+ROM%29';
+	window._wp_rp_post_tags = [];
+	window._wp_rp_promoted_content = true;
+</script>
+<link rel="stylesheet" href="../src/wp-content/plugins/wordpress-23-related-posts-plugin/static/themes/vertical-md4d3.css?version=3.6.4"/>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7QDMBT');</script>
+<!-- End Google Tag Manager --><link rel="pingback" href="../xmlrpc.php" />
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","../../chimpstatic.com/mcjs-connected/js/users/eb2c316ea9950848225bde19e/d39c78a4453de7aef2ab72c83.js");</script>
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "url" : "https://repairmymobile.in/",
+  "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+91-893-593-9022",
+      "contactType" : "customer service"
+    } ] }
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7QDMBT');</script>
+<!-- End Google Tag Manager -->
+<meta name="google-site-verification" content="UQMAwDjC43djghJuCSqnubI2HJR-kPFUlsWLYqX7DIc" />
+<link rel="alternate" hreflang="en" href="../how-to-grow-local-mobile-repair-shop/index.html" />
+<link rel="alternate" hreflang="hi" href="../how-to-grow-local-mobile-repair-shop-hin/index.html" />
+<link rel="alternate" hreflang="mr" href="../how-to-grow-a-local-mobile-repair-shop-in-maharashtra/index.html" />
+<link rel="alternate" hreflang="x-default" href="../how-to-grow-local-mobile-repair-shop/index.html" />
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            facebook: "1454623754798305", // Facebook page ID
+            call_to_action: "Namaste! Welcome to RepairMyMobile. ", // Call to action
+            position: "right", // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<style type="text/css">.site-title a { background: url(../src/wp-content/uploads/2020/07/rmm-logo.png) no-repeat !important; }</style>
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="../wp-content/uploads/2018/04/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="../wp-content/uploads/2018/04/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../wp-content/uploads/2018/04/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://repairmymobile.in/wp-content/uploads/2018/04/cropped-favicon-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.entry-content a {
+ color:#0000EE;
+}
+		</style>
+		
+<script data-ezscrex="false" data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-131022778-44";</script>
+<script data-ezscrex="false" data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-131022778-44']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'repairmymobile.in']);
+_gaq.push(['f._setDomainName', 'repairmymobile.in']);
+_gaq.push(['e._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['e._setCustomVar',2,'t','126',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod1',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['f._setCustomVar',2,'domain','repairmymobile.in',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "1";</script><base ><script type='text/javascript'>
+var ezoTemplate = 'old_site_gc';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 90360;
+var ezdomain = 'repairmymobile.in';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":0,"ad_lazyload_version":0,"city":"New Delhi","country":"IN","days_since_last_visit":-1,"domain_id":90360,"domain_test_group":20200410,"engaged_time_visit":0,"ezcache_level":1,"forensiq_score":-1,"form_factor_id":1,"framework_id":1,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"metro_code":0,"page_ad_positions":"","page_view_count":5,"page_view_id":"7e37a546-8958-4fa6-4597-a7b11e25310e","position_selection_id":0,"postal_code":"110008","pv_event_count":0,"response_time_orig":1277,"serverid":"13.234.231.59:22137","state":"DL","t_epoch":1597422708,"template_id":126,"time_on_site_visit":0,"url":"https://repairmymobile.in/flash-file-tool/","user_id":0,"word_count":363,"worst_bad_word_level":0};var _ezExtraQueries = "&ez_orig=1";</script><script data-ezscrex='false' data-cfasync='false' type="text/javascript" src="../detroitchicago/rochester84dc.js?cb=191-1&amp;v=9" async></script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_90360=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+}
+function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["7e37a546-8958-4fa6-4597-a7b11e25310e", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script></head>
+<body class="page-template-default page page-id-3834 theme-genesis woocommerce-no-js custom-header header-image header-full-width content-sidebar genesis-breadcrumbs-visible genesis-footer-widgets-hidden elementor-default elementor-kit-14582 elementor-page elementor-page-3834"><div class="site-container"><ul class="genesis-skip-link"><li><a href="#genesis-nav-primary" class="screen-reader-shortcut"> Skip to primary navigation</a></li><li><a href="#genesis-content" class="screen-reader-shortcut"> Skip to main content</a></li><li><a href="#genesis-sidebar-primary" class="screen-reader-shortcut"> Skip to primary sidebar</a></li></ul><header class="site-header"><div class="wrap"><div class="title-area"><p class="site-title"><a href="../index.html">RepairMyMobile.in</a></p><p class="site-description">One Stop Solution for Mobile Repair</p></div></div></header><nav class="nav-primary" aria-label="Main" id="genesis-nav-primary"><div class="wrap"><ul id="menu-primary" class="menu genesis-nav-menu menu-primary js-superfish"><li id="menu-item-4248" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4248"><a href="../index.html"><span >Home</span></a></li>
+<li id="menu-item-14828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14828"><a href="https://shop.repairmymobile.in/register"><span >Register Shop</span></a></li>
+<li id="menu-item-4249" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4249"><a href="#"><span >Solution</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-4250" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4250"><a href="../category/flash/index.html"><span >Android Flash File Database</span></a></li>
+	<li id="menu-item-4254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4254"><a href="../flashing-tool/index.html"><span >Flash Tool</span></a></li>
+	<li id="menu-item-4253" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4253"><a href="../category/driver/index.html"><span >Driver</span></a></li>
+	<li id="menu-item-4252" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4252"><a href="../category/root/index.html"><span >Root</span></a></li>
+	<li id="menu-item-12218" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12218"><a href="../category/frp/index.html"><span >FRP</span></a></li>
+	<li id="menu-item-4251" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4251"><a href="../category/hard-reset/index.html"><span >Hard Reset</span></a></li>
+</ul>
+</li>
+<li id="menu-item-4255" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3834 current_page_item menu-item-has-children menu-item-4255"><a href="index.html" aria-current="page"><span >Flash File</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-9389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9389"><a href="../category/flash/premium/index.html"><span >Premium Flash File</span></a></li>
+	<li id="menu-item-6885" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6885"><a href="../category/samsung-combination/index.html"><span >Combination</span></a></li>
+	<li id="menu-item-13483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13483"><a href="../category/hardware/index.html"><span >Hardware</span></a></li>
+</ul>
+</li>
+<li id="menu-item-4260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4260"><a href="../product-category/boxes/index.html"><span >Shop</span></a></li>
+<li id="menu-item-15823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15823"><a href="../mobile-repair-technician-jobs/index.html"><span >Jobs</span></a></li>
+<li id="menu-item-15145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15145"><a href="../repairing-quotation/index.html"><span >Repairing Quotation</span></a></li>
+<li id="menu-item-13654" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13654"><a href="../about/index.html"><span >About us</span></a></li>
+</ul></div></nav><div class="site-inner"><div class="content-sidebar-wrap"><main class="content" id="genesis-content"><div class="breadcrumb">You are here: <span class="breadcrumb-link-wrap"><a class="breadcrumb-link" href="../index.html"><span class="breadcrumb-link-text-wrap">Home</span></a><meta ></span> <span aria-label="breadcrumb separator">/</span> Download Android Flash File (Stock ROM)</div><article class="post-3834 page type-page status-publish has-post-thumbnail entry"><header class="entry-header"><h1 class="entry-title">Download Android Flash File (Stock ROM)</h1>
+</header><div class="entry-content">		<div data-elementor-type="wp-page" data-elementor-id="3834" class="elementor elementor-3834" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-ea65958 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ea65958" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2e4269f elementor-column elementor-col-100 elementor-top-column" data-id="2e4269f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7bcaef8 elementor-widget elementor-widget-text-editor" data-id="7bcaef8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h2 style="color: #333333; font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif;">Flash File &amp; Tool</h2><div><span style="color: #333333; font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 16px;">Flash File is required to flash the tablet. If in any case your Mobile or Tablet get stuck at android logo or if you had forget password &amp; hard reset is not working then you have to install the OS again. The download package include Flash tool required to perform flashing.</span></div><div><span style="color: #333333; font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 16px;"> </span><span style="color: #333333; font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 16px;">Below here the different mobile brand is listed. Check out your brand and download the ROM for your mobile.</span></div><div><p><strong>1- What is Flash File in Mobile?</strong></p><div id="eaa_after_nth_p" class="eaa-wrapper eaa_after_nth_p eaa_desktop"><div class="eaa-ad  " style=""><script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- Text & Display RMM -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5008056158801345"
+     data-ad-slot="8645849110"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div><div id="eaa_post_after_first_p" class="eaa-wrapper eaa_post_after_first_p eaa_desktop"><div class="eaa-ad  " style="margin:5px;"><div id = 'vdo_ai_div'></div><script>(function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '../../a.vdo.ai/core/repairmymobile/vdo.ai.js');</script>  </div></div><p>Flash File in mobile is Operating System software that manages Mobile hardware and Software services which provides common services for Mobile programs.</p><p><strong>2- What is Flash File in Android?</strong></p><p>Flash File in Android is just like Operating system in PC which manages hardware &amp; Software services for the Phone.</p><p><strong>3- What are flash File called?</strong></p><p>Flash file are usually refereed as Stock ROM, Firmware or ISO image files.</p><p><strong>4- How do I Download a Flash File?</strong></p><p>You can download the flash file of any mobile directly from RepairMyMobile websites which provides almost firmware for every phone.</p></div><div><span style="color: #333333; font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 16px;"> </span></div><h2 style="color: #333333; font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif;">SELECT BRAND</h2></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-d6ab144 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d6ab144" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a0c41bd elementor-column elementor-col-33 elementor-top-column" data-id="a0c41bd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f42065f elementor-widget elementor-widget-text-editor" data-id="f42065f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/tecno-flash-file/index.html"><img class="aligncenter size-full wp-image-14264" src="../src/wp-content/uploads/2020/03/Tecno.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Tecno Flash File</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-84d5f6b elementor-column elementor-col-33 elementor-top-column" data-id="84d5f6b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-767e8ab elementor-widget elementor-widget-text-editor" data-id="767e8ab" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/lyf-flash-file/index.html"><img class="aligncenter size-full wp-image-14265" src="../src/wp-content/uploads/2020/03/LYF.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>LYF Flash File</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-07fc5fb elementor-column elementor-col-33 elementor-top-column" data-id="07fc5fb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a69e964 elementor-widget elementor-widget-text-editor" data-id="a69e964" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-itel-flash-file/index.html"><img class="aligncenter size-full wp-image-14266" src="../src/wp-content/uploads/2020/03/Itel.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Itel Flash File</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-b55cd41 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b55cd41" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-023672d elementor-column elementor-col-33 elementor-top-column" data-id="023672d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-775a10e elementor-widget elementor-widget-text-editor" data-id="775a10e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><a href="../flash/download-celkon-flash-file/index.html"><img class="aligncenter size-full wp-image-14279" src="../src/wp-content/uploads/2020/03/celkon.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Celkon </a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1027658 elementor-column elementor-col-33 elementor-top-column" data-id="1027658" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-64b31c4 elementor-widget elementor-widget-text-editor" data-id="64b31c4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/samsung-flash-file-download/index.html"><img class="aligncenter size-full wp-image-14280" src="../src/wp-content/uploads/2020/03/samsung.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Samsung</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-aad5deb elementor-column elementor-col-33 elementor-top-column" data-id="aad5deb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a8322a2 elementor-widget elementor-widget-text-editor" data-id="a8322a2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-haier-flash-file-tools/index.html"><img class="aligncenter size-full wp-image-14281" src="../src/wp-content/uploads/2020/03/haier.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Haier </a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-09f4b3f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="09f4b3f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7de4a49 elementor-column elementor-col-33 elementor-top-column" data-id="7de4a49" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e49d411 elementor-widget elementor-widget-text-editor" data-id="e49d411" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-karbonn-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14282" src="../src/wp-content/uploads/2020/03/karbonn.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Karbonn </a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-d42280b elementor-column elementor-col-33 elementor-top-column" data-id="d42280b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d898c1e elementor-widget elementor-widget-text-editor" data-id="d898c1e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-swipe-mobile-tablet-flash-file-tool/index.html"><img class="aligncenter size-full wp-image-14283" src="../src/wp-content/uploads/2020/03/swipe.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Swipe </a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a781773 elementor-column elementor-col-33 elementor-top-column" data-id="a781773" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-aaeece2 elementor-widget elementor-widget-text-editor" data-id="aaeece2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><a href="../flash/download-xiaomi-mobile-flash-file-tool/index.html"><img class="aligncenter size-full wp-image-14284" src="../src/wp-content/uploads/2020/03/Xiaomi.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Xiaomi </a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-e2edc8a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e2edc8a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c67dc68 elementor-column elementor-col-33 elementor-top-column" data-id="c67dc68" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c7cd3bc elementor-widget elementor-widget-text-editor" data-id="c7cd3bc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-spice-mobile-flash-file-list/index.html"><img class="aligncenter size-full wp-image-14285" src="../src/wp-content/uploads/2020/03/Spice.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Spice </a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-f67ec5e elementor-column elementor-col-33 elementor-top-column" data-id="f67ec5e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4d61edb elementor-widget elementor-widget-text-editor" data-id="4d61edb" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/gionee-mobile-flash-file-list/index.html"><img class="aligncenter size-full wp-image-14286" src="../src/wp-content/uploads/2020/03/Gionee.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Gionee </a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-25a9152 elementor-column elementor-col-33 elementor-top-column" data-id="25a9152" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d3a1700 elementor-widget elementor-widget-text-editor" data-id="d3a1700" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/lava-mobile-flash-file-list/index.html"><img class="size-full wp-image-14287 aligncenter" src="../src/wp-content/uploads/2020/03/lava.jpg" alt="" width="180" height="90"/></a><a>Lava </a></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-27fc579 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="27fc579" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5f7effb elementor-column elementor-col-33 elementor-top-column" data-id="5f7effb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-121763c elementor-widget elementor-widget-text-editor" data-id="121763c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/zen-mobile-flash-file-list/index.html"><img class="aligncenter size-full wp-image-14289" src="../src/wp-content/uploads/2020/03/zen.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Zen</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b0469a3 elementor-column elementor-col-33 elementor-top-column" data-id="b0469a3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-cf62189 elementor-widget elementor-widget-text-editor" data-id="cf62189" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-micromax-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14290" src="../src/wp-content/uploads/2020/03/micromax.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Micromax</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-aad0372 elementor-column elementor-col-33 elementor-top-column" data-id="aad0372" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0fce606 elementor-widget elementor-widget-text-editor" data-id="0fce606" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-iball-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14291" src="../src/wp-content/uploads/2020/03/iball.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>iBall</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-f09faa6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f09faa6" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-95d97f6 elementor-column elementor-col-33 elementor-top-column" data-id="95d97f6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6dc5c08 elementor-widget elementor-widget-text-editor" data-id="6dc5c08" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-coolpad-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14292" src="../src/wp-content/uploads/2020/03/coolpad.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>CoolPad</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-908f348 elementor-column elementor-col-33 elementor-top-column" data-id="908f348" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-dc9ff58 elementor-widget elementor-widget-text-editor" data-id="dc9ff58" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-cubot-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14293" src="../src/wp-content/uploads/2020/03/cubot.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Cubot</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-76cb634 elementor-column elementor-col-33 elementor-top-column" data-id="76cb634" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8ed5a7e elementor-widget elementor-widget-text-editor" data-id="8ed5a7e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-videocon-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14294" src="../src/wp-content/uploads/2020/03/videocon.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Videocon</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-fba064e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fba064e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ea6341e elementor-column elementor-col-33 elementor-top-column" data-id="ea6341e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-df5c8fd elementor-widget elementor-widget-text-editor" data-id="df5c8fd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-huawei-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14295" src="../src/wp-content/uploads/2020/03/huawei.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Huawei</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-8fb6cb3 elementor-column elementor-col-33 elementor-top-column" data-id="8fb6cb3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-48e2450 elementor-widget elementor-widget-text-editor" data-id="48e2450" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-adcom-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14296" src="../src/wp-content/uploads/2020/03/adcom.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Adcom</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3c19aaf elementor-column elementor-col-33 elementor-top-column" data-id="3c19aaf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e54c3fe elementor-widget elementor-widget-text-editor" data-id="e54c3fe" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-ambrane-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14297" src="../src/wp-content/uploads/2020/03/ambrane.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Ambrane</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-3fb5fcd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3fb5fcd" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d2d1fd7 elementor-column elementor-col-33 elementor-top-column" data-id="d2d1fd7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3db26f5 elementor-widget elementor-widget-text-editor" data-id="3db26f5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-amoi-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14298" src="../src/wp-content/uploads/2020/03/Amoi.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Amoi</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b64f866 elementor-column elementor-col-33 elementor-top-column" data-id="b64f866" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8e0eb7a elementor-widget elementor-widget-text-editor" data-id="8e0eb7a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-arise-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14299" src="../src/wp-content/uploads/2020/03/arise.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Arise</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-229df49 elementor-column elementor-col-33 elementor-top-column" data-id="229df49" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1f6dd11 elementor-widget elementor-widget-text-editor" data-id="1f6dd11" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><img class="aligncenter size-full wp-image-14300" src="../src/wp-content/uploads/2020/03/bassoon.jpg" alt="" width="180" height="90"/></p><h5 style="text-align: center;"><a>Bassoon</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-3dcb704 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3dcb704" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d637335 elementor-column elementor-col-33 elementor-top-column" data-id="d637335" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-49cdcf5 elementor-widget elementor-widget-text-editor" data-id="49cdcf5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><img class="aligncenter size-full wp-image-14301" src="../src/wp-content/uploads/2020/03/bedove.jpg" alt="" width="180" height="90"/></p><h5 style="text-align: center;"><a>Bedove</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-0e2f62a elementor-column elementor-col-33 elementor-top-column" data-id="0e2f62a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-13ab9fa elementor-widget elementor-widget-text-editor" data-id="13ab9fa" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-bluebo-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14302" src="../src/wp-content/uploads/2020/03/bluebo.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Bluebo</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-cdde561 elementor-column elementor-col-33 elementor-top-column" data-id="cdde561" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-03ee2aa elementor-widget elementor-widget-text-editor" data-id="03ee2aa" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-bq-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14303" src="../src/wp-content/uploads/2020/03/BQ.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>BQ</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-c3b5315 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c3b5315" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a610737 elementor-column elementor-col-33 elementor-top-column" data-id="a610737" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-dbed65a elementor-widget elementor-widget-text-editor" data-id="dbed65a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-bsnl-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14304" src="../src/wp-content/uploads/2020/03/bsnl.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Bsnl</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-0bde482 elementor-column elementor-col-33 elementor-top-column" data-id="0bde482" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-619cf19 elementor-widget elementor-widget-text-editor" data-id="619cf19" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-croma-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14305" src="../src/wp-content/uploads/2020/03/croma.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Croma</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-eb5c42e elementor-column elementor-col-33 elementor-top-column" data-id="eb5c42e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4958c08 elementor-widget elementor-widget-text-editor" data-id="4958c08" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-byond-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14306" src="../src/wp-content/uploads/2020/03/byond.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Byond</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-0d0c046 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="0d0c046" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-da241e4 elementor-column elementor-col-33 elementor-top-column" data-id="da241e4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-565bbc4 elementor-widget elementor-widget-text-editor" data-id="565bbc4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-datawind-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14307" src="../src/wp-content/uploads/2020/03/datawind.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Datawind</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7333efe elementor-column elementor-col-33 elementor-top-column" data-id="7333efe" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9adca0f elementor-widget elementor-widget-text-editor" data-id="9adca0f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-hitech-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14308" src="../src/wp-content/uploads/2020/03/hitech.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>HiTech</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-6631277 elementor-column elementor-col-33 elementor-top-column" data-id="6631277" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3b7328e elementor-widget elementor-widget-text-editor" data-id="3b7328e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-panasonic-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14309" src="../src/wp-content/uploads/2020/03/panasonic.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Panasonic</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-80d89fe elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="80d89fe" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c4f2e5c elementor-column elementor-col-33 elementor-top-column" data-id="c4f2e5c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d438942 elementor-widget elementor-widget-text-editor" data-id="d438942" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-lenovo-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14310" src="../src/wp-content/uploads/2020/03/lenovo.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Lenovo</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-17ea411 elementor-column elementor-col-33 elementor-top-column" data-id="17ea411" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3bd545e elementor-widget elementor-widget-text-editor" data-id="3bd545e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-lemon-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14311" src="../src/wp-content/uploads/2020/03/lemon.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Lemon</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-d161ffa elementor-column elementor-col-33 elementor-top-column" data-id="d161ffa" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-47eb1b5 elementor-widget elementor-widget-text-editor" data-id="47eb1b5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-vodafone-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14312" src="../src/wp-content/uploads/2020/03/vodafone.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Vodafone</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-65f9520 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="65f9520" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7e072a8 elementor-column elementor-col-33 elementor-top-column" data-id="7e072a8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-19e131f elementor-widget elementor-widget-text-editor" data-id="19e131f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-wynncom-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14313" src="../src/wp-content/uploads/2020/03/Wynncom.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Wynncom</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b04cede elementor-column elementor-col-33 elementor-top-column" data-id="b04cede" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f7a66ab elementor-widget elementor-widget-text-editor" data-id="f7a66ab" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-infocus-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14314" src="../src/wp-content/uploads/2020/03/Infocus.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>InFocus</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e34f163 elementor-column elementor-col-33 elementor-top-column" data-id="e34f163" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f3c643e elementor-widget elementor-widget-text-editor" data-id="f3c643e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-zync-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14315" src="../src/wp-content/uploads/2020/03/zync.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Zync</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-dc64441 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="dc64441" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6948fd7 elementor-column elementor-col-33 elementor-top-column" data-id="6948fd7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1d07101 elementor-widget elementor-widget-text-editor" data-id="1d07101" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-fly-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14316" src="../src/wp-content/uploads/2020/03/fly.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Fly</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-ca72cfe elementor-column elementor-col-33 elementor-top-column" data-id="ca72cfe" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f11e3a5 elementor-widget elementor-widget-text-editor" data-id="f11e3a5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-maxx-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14317" src="../src/wp-content/uploads/2020/03/maxx.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Maxx</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-23fc240 elementor-column elementor-col-33 elementor-top-column" data-id="23fc240" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9549dbc elementor-widget elementor-widget-text-editor" data-id="9549dbc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-intex-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14318" src="../src/wp-content/uploads/2020/03/intex.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Intex</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-9b09e4d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9b09e4d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b63bc8f elementor-column elementor-col-33 elementor-top-column" data-id="b63bc8f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2dd0bc2 elementor-widget elementor-widget-text-editor" data-id="2dd0bc2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-xolo-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14319" src="../src/wp-content/uploads/2020/03/Xolo.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Xolo</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5929d5c elementor-column elementor-col-33 elementor-top-column" data-id="5929d5c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-81837f7 elementor-widget elementor-widget-text-editor" data-id="81837f7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-gfive-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14320" src="../src/wp-content/uploads/2020/03/gfive.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Gfive</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e44b607 elementor-column elementor-col-33 elementor-top-column" data-id="e44b607" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-49d29fb elementor-widget elementor-widget-text-editor" data-id="49d29fb" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-eurostar-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14321" src="../src/wp-content/uploads/2020/03/eurostar.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>EuroStar</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-85e55c7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="85e55c7" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cd5d660 elementor-column elementor-col-33 elementor-top-column" data-id="cd5d660" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-066f807 elementor-widget elementor-widget-text-editor" data-id="066f807" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-ziox-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14322" src="../src/wp-content/uploads/2020/03/ziox.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Ziox</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a88c56d elementor-column elementor-col-33 elementor-top-column" data-id="a88c56d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-31f299a elementor-widget elementor-widget-text-editor" data-id="31f299a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-zebpad-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14323" src="../src/wp-content/uploads/2020/03/zebpad.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Zebpad</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-f71dccd elementor-column elementor-col-33 elementor-top-column" data-id="f71dccd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-aeff37c elementor-widget elementor-widget-text-editor" data-id="aeff37c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><img class="aligncenter size-full wp-image-14324" src="../src/wp-content/uploads/2020/03/simmtronics.jpg" alt="" width="180" height="90"/></p><h5 style="text-align: center;"><a>Simmtronics</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-e3875e5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e3875e5" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-04bfcb2 elementor-column elementor-col-33 elementor-top-column" data-id="04bfcb2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7299fd9 elementor-widget elementor-widget-text-editor" data-id="7299fd9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-rage-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14325" src="../src/wp-content/uploads/2020/03/rage.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Rage</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e2a2b0e elementor-column elementor-col-33 elementor-top-column" data-id="e2a2b0e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a4db3b6 elementor-widget elementor-widget-text-editor" data-id="a4db3b6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><img class="aligncenter size-full wp-image-14326" src="../src/wp-content/uploads/2020/03/salora.jpg" alt="" width="180" height="90"/></p><h5 style="text-align: center;"><a>Salora</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-10da4a9 elementor-column elementor-col-33 elementor-top-column" data-id="10da4a9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7c77ebd elementor-widget elementor-widget-text-editor" data-id="7c77ebd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-walton-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14327" src="../src/wp-content/uploads/2020/03/walton.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Walton</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-abcfc6d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="abcfc6d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-04a5dec elementor-column elementor-col-33 elementor-top-column" data-id="04a5dec" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c7787b5 elementor-widget elementor-widget-text-editor" data-id="c7787b5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-wiko-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14328" src="../src/wp-content/uploads/2020/03/wiko.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Wiko</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-11c2cc9 elementor-column elementor-col-33 elementor-top-column" data-id="11c2cc9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-86badd7 elementor-widget elementor-widget-text-editor" data-id="86badd7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-zopo-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14329" src="../src/wp-content/uploads/2020/03/zopo.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Zopo</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-47d0e45 elementor-column elementor-col-33 elementor-top-column" data-id="47d0e45" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-41febcf elementor-widget elementor-widget-text-editor" data-id="41febcf" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><img class="aligncenter size-full wp-image-14330" src="../src/wp-content/uploads/2020/03/5star.jpg" alt="" width="180" height="90"/></p><h5 style="text-align: center;"><a>5Star</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-37f7c06 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="37f7c06" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-80d4651 elementor-column elementor-col-33 elementor-top-column" data-id="80d4651" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4a2ecff elementor-widget elementor-widget-text-editor" data-id="4a2ecff" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-chilli-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14331" src="../src/wp-content/uploads/2020/03/chilli.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Chilli</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5d6d215 elementor-column elementor-col-33 elementor-top-column" data-id="5d6d215" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-70fed42 elementor-widget elementor-widget-text-editor" data-id="70fed42" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/download-domo-mobile-flash-file/index.html"><img class="aligncenter size-full wp-image-14332" src="../src/wp-content/uploads/2020/03/domo.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Domo</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-37b79d3 elementor-column elementor-col-33 elementor-top-column" data-id="37b79d3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-61ae514 elementor-widget elementor-widget-text-editor" data-id="61ae514" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/lephone-flash-file/index.html"><img class="aligncenter size-full wp-image-14333" src="../src/wp-content/uploads/2020/03/Lephone.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>LePhone</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-a842149 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a842149" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-efce9eb elementor-column elementor-col-33 elementor-top-column" data-id="efce9eb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-bd05b1e elementor-widget elementor-widget-text-editor" data-id="bd05b1e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;"><a href="../flash/yuho-flash-file/index.html"><img class="aligncenter size-full wp-image-14334" src="../src/wp-content/uploads/2020/03/yuho.jpg" alt="" width="180" height="90"/></a></p><h5 style="text-align: center;"><a>Yuho</a></h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5d87031 elementor-column elementor-col-33 elementor-top-column" data-id="5d87031" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-bb1cfc1 elementor-column elementor-col-33 elementor-top-column" data-id="bb1cfc1" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		</p></div></article></main><aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar" id="genesis-sidebar-primary"><h2 class="genesis-sidebar-title screen-reader-text">Primary Sidebar</h2><section id="search-2" class="widget widget_search"><div class="widget-wrap"><form class="search-form" method="get" action="https://repairmymobile.in/" role="search"><label class="search-form-label screen-reader-text" for="searchform-1">Search this website</label><input class="search-form-input" type="search" name="s" id="searchform-1" placeholder="Search this website"><input class="search-form-submit" type="submit" value="Search"><meta content="../index1f8a.html?s={s}"></form></div></section>
+<section id="text-10" class="widget widget_text"><div class="widget-wrap"><h3 class="widgettitle widget-title">Customer Care</h3>
+			<div class="textwidget"><p><strong>+91-893-593-9022</strong></p>
+</div>
+		</div></section>
+
+
+
+		<section id="recent-posts-3" class="widget widget_recent_entries"><div class="widget-wrap">		<h3 class="widgettitle widget-title">Recent Posts</h3>
+		<ul>
+											<li>
+					<a href="../flash/realme-flashing-tools/index.html">Realme Flashing Tools</a>
+									</li>
+											<li>
+					<a href="../flash/panasonic-eluga-i8-flash-file/index.html">Panasonic Eluga I8 Flash File (Stock ROM)</a>
+									</li>
+											<li>
+					<a href="../flash/lenovo-tb3-x70f-flash-file/index.html">Lenovo TB3-X70F Flash File (Stock ROM)</a>
+									</li>
+											<li>
+					<a href="../flash/redmi-note-9-pro-global-flash-file/index.html">Redmi Note 9 Pro Global Flash File (Stock ROM)</a>
+									</li>
+											<li>
+					<a href="../training/umt-dongle-training/index.html">UMT Dongle Training</a>
+									</li>
+					</ul>
+		</div></section>
+</aside></div></div><footer class="site-footer"><div class="wrap"><nav class="nav-secondary" aria-label="Secondary"><div class="wrap"><ul id="menu-footer" class="menu genesis-nav-menu menu-secondary js-superfish"><li id="menu-item-4323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4323"><a href="../privacy-policy/index.html"><span >Privacy Policy</span></a></li>
+<li id="menu-item-4324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4324"><a href="../firmware-credit/index.html"><span >Firmware Credit</span></a></li>
+<li id="menu-item-4333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4333"><a href="../contact-us/index.html"><span >Contact Us</span></a></li>
+</ul></div></nav><p></p></div></footer></div>	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/repairmymobile.in\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../src/wp-content/plugins/contact-form-7/includes/js/scripts6725.js?ver=5.1.7"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"repairmymobile"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../src/wp-content/plugins/disqus-comment-system/public/js/comment_countd4e0.js?ver=3.0.17"></script>
+<script type="text/javascript" src="../src/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/repairmymobile.in\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../src/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.minf39e.js?ver=4.0.1"></script>
+<script type="text/javascript" src="../src/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js?ver=2.1.4"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../src/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.minf39e.js?ver=4.0.1"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_93e5ce2fb4be7f4456b578c5ab0580b7","fragment_name":"wc_fragments_93e5ce2fb4be7f4456b578c5ab0580b7","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../src/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.minf39e.js?ver=4.0.1"></script>
+<script type="text/javascript" src="../src/wp-includes/js/hoverIntent.minc245.js?ver=1.8.1"></script>
+<script type="text/javascript" src="../src/wp-content/themes/genesis/lib/js/menu/superfish.mina71a.js?ver=1.7.10"></script>
+<script type="text/javascript" src="../src/wp-content/themes/genesis/lib/js/menu/superfish.args.min3d36.js?ver=3.3.1"></script>
+<script type="text/javascript" src="../src/wp-content/themes/genesis/lib/js/skip-links.min3d36.js?ver=3.3.1"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var genesisSampleL10n = {"mainMenu":"Menu","subMenu":"Menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../src/wp-content/themes/aiko-master/js/responsive-menu8a54.js?ver=1.0.0"></script>
+<script type="text/javascript" src="../src/wp-includes/js/wp-embed.min7661.js?ver=5.4.2"></script>
+<script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/js/frontend-modules.min4315.js?ver=2.9.8"></script>
+<script type="text/javascript" src="../src/wp-includes/js/jquery/ui/position.mine899.js?ver=1.11.4"></script>
+<script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/lib/dialog/dialog.minae9e.js?ver=4.7.6"></script>
+<script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2"></script>
+<script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/lib/swiper/swiper.min48f5.js?ver=5.3.6"></script>
+<script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/lib/share-link/share-link.min4315.js?ver=2.9.8"></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.8","urls":{"assets":"https:\/\/repairmymobile.in\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":3834,"title":"Download%20Android%20Flash%20File%20%28Stock%20ROM%29%20-%20RepairMyMobile.in","excerpt":"","featuredImage":"https:\/\/repairmymobile.in\/wp-content\/uploads\/2020\/08\/logo200200.jpg"}};
+</script>
+<script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/js/frontend.min4315.js?ver=2.9.8"></script>
+<script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.html', '/detroitchicago/edmonton.webp?a=a&cb=1&shcb=34', true, ['/detroitchicago/minneapolis.js'], true, false, false, false);
+__ez.queue.addFile('jellyfish.html', '/porpoiseant/jellyfish.webp?a=a&cb=1&shcb=34', false, [], true, false, false, false);
+</script>
+
+<script>var _audins_dom="repairmymobile_in",_audins_did=90360;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "../../go.ezoic.net/detroitchicago/audinsddf7.js?cb=191-1");</script><noscript><div style="display:none;"><img src="../../pixel.quantserve.com/pixel/p-31iz6hfFutd164407.gif?labels=Domain.repairmymobile_in,DomainId.90360" border="0" height="1" width="1" alt="Quantcast"/></div></noscript><noscript><img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=20015427&amp;cv=2.0&amp;cj=1"/></noscript>
+<script type='text/javascript' data-cfasync='false'></script></body>
+<!-- Mirrored from repairmymobile.in/flash-file-tool/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Aug 2020 16:35:44 GMT -->
+</html>
