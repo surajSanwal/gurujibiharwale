@@ -4,51 +4,16 @@
 <!-- Mirrored from https://gurujibiharwale.in//flash-file-tool/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Aug 2020 16:35:05 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head ><meta charset="UTF-8" />
-<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;__ez.queue=(function(){var count=0,incr=0,items=[],timeDelayFired=false,hpItems=[],lpItems=[],allowLoad=true;var obj={func:function(name,funcName,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError){var self=this;this.name=name;this.funcName=funcName;this.parameters=parameters===null?null:(parameters instanceof Array)?parameters:[parameters];this.isBlock=isBlock;this.blockedBy=blockedBy;this.deleteWhenComplete=deleteWhenComplete;this.isError=false;this.isComplete=false;this.isInitialized=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){log("... func = "+name);self.isInitialized=true;self.isComplete=true;log("... func.apply: "+name);var funcs=self.funcName.split('.');var func=null;if(funcs.length>3){}else if(funcs.length===3){func=window[funcs[0]][funcs[1]][funcs[2]];}else if(funcs.length===2){func=window[funcs[0]][funcs[1]];}else{func=window[self.funcName];}
-if(typeof func!=='undefined'&&func!==null){func.apply(null,this.parameters);}
-if(self.deleteWhenComplete===true)delete items[name];if(self.isBlock===true){log("----- F'D: "+self.name);processAll();}}},file:function(name,path,isBlock,blockedBy,async,defer,proceedIfError){var self=this;this.name=name;this.path=path;this.async=async;this.defer=defer;this.isBlock=isBlock;this.blockedBy=blockedBy;this.isInitialized=false;this.isError=false;this.isComplete=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){self.isInitialized=true;log("... file = "+name);var scr=document.createElement('script');scr.src=path;if(async===true)scr.async=true;else if(defer===true)scr.defer=true;scr.onerror=function(){log("----- ERR'D: "+self.name);self.isError=true;if(self.isBlock===true){processAll();}};scr.onreadystatechange=scr.onload=function(){var state=scr.readyState;log("----- F'D: "+self.name);if((!state||/loaded|complete/.test(state))){self.isComplete=true;if(self.isBlock===true){processAll();}}};document.getElementsByTagName('head')[0].appendChild(scr);}}};function init(){window.addEventListener("load",function(){setTimeout(function(){timeDelayFired=true;log('TDELAY -----');processAll();},5000);},false);}
-function addFile(name,path,isBlock,blockedBy,async,defer,proceedIfError,priority){var item=new obj.file(name,path,isBlock,blockedBy,async,defer,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
-items[name]=item;checkIfBlocked(item);}
-function setallowLoad(settobool){allowLoad=settobool}
-function addFunc(name,func,parameters,isBlock,blockedBy,autoInc,deleteWhenComplete,proceedIfError,priority){if(autoInc===true)name=name+"_"+incr++;var item=new obj.func(name,func,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
-items[name]=item;checkIfBlocked(item);}
-function addTimeDelayFile(name,path){var item=new obj.file(name,path,false,[],false,false,true);item.isTimeDelay=true;log(name+' ... '+' FILE! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
-function addTimeDelayFunc(name,func,parameters){var item=new obj.func(name,func,parameters,false,[],true,true);item.isTimeDelay=true;log(name+' ... '+' FUNCTION! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
-function checkIfBlocked(item){if(isBlocked(item)===true||allowLoad==false)return;item.process();}
-function isBlocked(item){if(item.isTimeDelay===true&&timeDelayFired===false){log(item.name+" blocked = TIME DELAY!");return true;}
-if(item.blockedBy instanceof Array){for(var i=0;i<item.blockedBy.length;i++){var block=item.blockedBy[i];if(items.hasOwnProperty(block)===false){log(item.name+" blocked = "+block);return true;}else if(item.proceedIfError===true&&items[block].isError===true){return false;}else if(items[block].isComplete===false){log(item.name+" blocked = "+block);return true;}}}
-return false;}
-function log(msg){var href=window.location.href;var reg=new RegExp('[?&]ezq=([^&#]*)','i');var string=reg.exec(href);var res=string?string[1]:null;if(res==="1")console.debug(msg);}
-function processAll(){count++;if(count>200)return;log("let's go");processItems(hpItems);processItems(lpItems);}
-function processItems(list){for(var i in list){if(list.hasOwnProperty(i)===false)continue;var item=list[i];if(item.isComplete===true||isBlocked(item)||item.isInitialized===true||item.isError===true){if(item.isError===true){log(item.name+': error')}else if(item.isComplete===true){log(item.name+': complete already')}else if(item.isInitialized===true){log(item.name+': initialized already')}}else{item.process();}}}
-init();return{addFile:addFile,addDelayFile:addTimeDelayFile,addFunc:addFunc,addDelayFunc:addTimeDelayFunc,items:items,processAll:processAll,setallowLoad:setallowLoad};})();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.queue.addFile('../detroitchicago/boise.js', '../detroitchicago/boise955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);__ez.dot={};__ez.queue.addFile('../detroitchicago/memphis.js', '../detroitchicago/memphis955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);__ez.queue.addFile('../detroitchicago/minneapolis.js', '../detroitchicago/minneapolis955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);__ez.vep=(function(){var pixels=[],pxURL="../detroitchicago/grapefruit.gif";function AddPixel(vID,pixelData){if(__ez.dot.isDefined(vID)&&__ez.dot.isValid(pixelData)){pixels.push({type:'video',video_impression_id:vID,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(pixelData)});}}
-function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender"){return;}
-if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
-var pushPixels=pixels.splice(0,j);(new Image()).src=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&v="+btoa(JSON.stringify(pushPixels));}}
-pixels=[];}
-return{Add:AddPixel,Fire:Fire};})();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.pel=(function(){var pixels=[],pxURL="../porpoiseant/army.gif";function AddAndFirePixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0);Fire();}
-function GetCurrentPixels(){return pixels;}
-function AddPixel(adSlot,pixelData,revenue,est_revenue,bid_floor_filled,bid_floor_prev,stat_source_id){if(!__ez.dot.isDefined(adSlot)||__ez.dot.isAnyDefined(adSlot.getSlotElementId,adSlot.ElementId)==false){return;}
-var ad_position_id=parseInt(__ez.dot.getTargeting(adSlot,'ap'));var impId=__ez.dot.getSlotIID(adSlot),adUnit=__ez.dot.getAdUnit(adSlot);var compId=parseInt(__ez.dot.getTargeting(adSlot,"compid"));var lineItemId=0;var creativeId=0;var ezimData=getEzimData(adSlot);if(typeof ezimData=='object'){if(ezimData.creative_id!==undefined){creativeId=ezimData.creative_id;}
-if(ezimData.line_item_id!==undefined){lineItemId=ezimData.line_item_id;}}
-if(__ez.dot.isDefined(impId,adUnit)&&__ez.dot.isValid(pixelData)){pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),revenue:revenue,est_revenue:est_revenue,ad_position:ad_position_id,ad_size:"",bid_floor_filled:bid_floor_filled,bid_floor_prev:bid_floor_prev,stat_source_id:stat_source_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:compId,line_item_id:lineItemId,creative_id:creativeId,data:__ez.dot.dataToStr(pixelData)});}}
-function AddPixelById(impFullId,pixelData){var vals=impFullId.split('../index.html');if(__ez.dot.isDefined(impFullId)&&vals.length===3&&__ez.dot.isValid(pixelData)){var adUnit=vals[0],impId=vals[2];pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(pixelData)});}}
-function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender")return;if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
-var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&sts="+btoa(JSON.stringify(pushPixels));if(typeof window.isAmp!=='undefined'&&isAmp&&typeof window._ezaq!=='undefined'&&_ezaq.hasOwnProperty("domain_id")){pixelURL+="&visit_uuid="+_ezaq['visit_uuid'];}
-(new Image()).src=pixelURL;}}
-pixels=[];}
-function getEzimData(adSlot){if(typeof _ezim_d=="undefined"){return false}
-var adUnitName=__ez.dot.getAdUnitPath(adSlot).split('../index.html').pop();if(typeof _ezim_d==='object'&&_ezim_d.hasOwnProperty(adUnitName)){return _ezim_d[adUnitName];}
-for(var ezimKey in _ezim_d){if(ezimKey.split('../index.html').pop()===adUnitName){return _ezim_d[ezimKey];}}
-return false;}
-return{Add:AddPixel,AddAndFire:AddAndFirePixel,AddById:AddPixelById,Fire:Fire,GetPixels:GetCurrentPixels,};})();__ez.queue.addFile('../detroitchicago/raleigh.js', '../detroitchicago/raleigh955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);__ez.queue.addFile('../detroitchicago/tampa.js', '../detroitchicago/tampa955a.js?gcb=191-1&amp;cb=1', false, [], true, false, true, false);</script>
-<script data-ezscrex="false" data-cfasync="false">(function(){if("function"===typeof window.CustomEvent)return!1;window.CustomEvent=function(c,a){a=a||{bubbles:!1,cancelable:!1,detail:null};var b=document.createEvent("CustomEvent");b.initCustomEvent(c,a.bubbles,a.cancelable,a.detail);return b}})();</script><script data-ezscrex="false" data-cfasync="false">__ez.queue.addFile('../detroitchicago/tulsa.js', '../detroitchicago/tulsa4d7f.js?gcb=191-1&amp;cb=2', false, [], true, false, true, false);</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Download Android Flash File (Stock ROM) - https://gurujibiharwale.in/</title>
 
 <!-- This site is optimized with the Yoast SEO plugin v13.5 - https://yoast.com/wordpress/plugins/seo/ -->
 <meta name="description" content="More than 60 Brands of Mobile Phone Flash File has been listed which includes more than 30000 model file has been listed."/>
+    
+    <link rel='stylesheet' id='google-fonts-css'  href='../src/wp-content/themes/aiko-master/customStyle.css' type='text/css' media='all' />
+    
+    
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <link rel="canonical" href="index.html" />
 <meta property="og:locale" content="en_US" />
@@ -75,25 +40,7 @@ return{Add:AddPixel,AddAndFire:AddAndFirePixel,AddById:AddPixelById,Fire:Fire,Ge
 <link rel='dns-prefetch' href='http://s.w.org/' />
 <link rel="alternate" type="application/rss+xml" title="https://gurujibiharwale.in/ &raquo; Feed" href="../feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="https://gurujibiharwale.in/ &raquo; Comments Feed" href="../comments/feed/index.html" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/https://gurujibiharwale.in/\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
-			/*! This file is auto-generated */
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
+
 	<link rel="stylesheet" id="aiko-theme-css" href="../src/wp-content/themes/aiko-master/styledbc2.css?ver=2.2.6" type="text/css" media="all"/>
 <link rel="stylesheet" id="wp-block-library-css" href="../src/wp-includes/css/dist/block-library/style.min7661.css?ver=5.4.2" type="text/css" media="all"/>
 <link rel="stylesheet" id="wc-block-style-css" href="../src/wp-content/plugins/woo-gutenberg-products-block/build/style737b.css?ver=2.5.15" type="text/css" media="all"/>
@@ -102,9 +49,7 @@ img.emoji {
 <link rel="stylesheet" id="woocommerce-layout-css" href="../src/wp-content/plugins/woocommerce/assets/css/woocommerce-layoutf39e.css?ver=4.0.1" type="text/css" media="all"/>
 <link rel="stylesheet" id="woocommerce-smallscreen-css" href="../src/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreenf39e.css?ver=4.0.1" type="text/css" media="only screen and (max-width: 768px)"/>
 <link rel="stylesheet" id="woocommerce-general-css" href="../src/wp-content/plugins/woocommerce/assets/css/woocommercef39e.css?ver=4.0.1" type="text/css" media="all"/>
-<style id='woocommerce-inline-inline-css' type='text/css'>
-.woocommerce form .form-row .required { visibility: visible; }
-</style>
+
 <link rel='stylesheet' id='google-fonts-css'  href='./src/wp-content/themes/aiko-master/customStyle.css' type='text/css' media='all' /><link rel='stylesheet' id='google-fonts-css'  href='http://fonts.googleapis.com/css?family=PT+Sans%7CPT+Serif&amp;ver=2.2.6' type='text/css' media='all' />
 <link rel="stylesheet" id="dashicons-css" href="../src/wp-includes/css/dashicons.min7661.css?ver=5.4.2" type="text/css" media="all"/>
 <link rel="stylesheet" id="elementor-icons-css" href="../src/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min4c7e.css?ver=5.6.2" type="text/css" media="all"/>
@@ -131,151 +76,23 @@ img.emoji {
 <link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed7329.json?url=https%3A%2F%2Fhttps://gurujibiharwale.in/%2Fflash-file-tool%2F" />
 <link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed5c04?url=https%3A%2F%2Fhttps://gurujibiharwale.in/%2Fflash-file-tool%2F&amp;format=xml" />
 
-<script data-cfasync="false">
-window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
-(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="../../static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
-</script>
-<script type="text/javascript">var ajaxurl = "https://https://gurujibiharwale.in//wp-admin/admin-ajax.php";</script><script type="text/javascript">
-	window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
-	window._wp_rp_wp_ajax_url = "https://https://gurujibiharwale.in//wp-admin/admin-ajax.php";
-	window._wp_rp_plugin_version = '3.6.4';
-	window._wp_rp_post_id = '3834';
-	window._wp_rp_num_rel_posts = '4';
-	window._wp_rp_thumbnails = true;
-	window._wp_rp_post_title = 'Download+Android+Flash+File+%28Stock+ROM%29';
-	window._wp_rp_post_tags = [];
-	window._wp_rp_promoted_content = true;
-</script>
+
 <link rel="stylesheet" href="../src/wp-content/plugins/wordpress-23-related-posts-plugin/static/themes/vertical-md4d3.css?version=3.6.4"/>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W7QDMBT');</script>
-<!-- End Google Tag Manager --><link rel="pingback" href="../xmlrpc.php" />
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","../../chimpstatic.com/mcjs-connected/js/users/eb2c316ea9950848225bde19e/d39c78a4453de7aef2ab72c83.js");</script>
-<script type="application/ld+json">
-{ "@context" : "http://schema.org",
-  "@type" : "Organization",
-  "url" : "https://https://gurujibiharwale.in//",
-  "contactPoint" : [
-    { "@type" : "ContactPoint",
-      "telephone" : "+91-893-593-9022",
-      "contactType" : "customer service"
-    } ] }
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W7QDMBT');</script>
-<!-- End Google Tag Manager -->
+
 <meta name="google-site-verification" content="UQMAwDjC43djghJuCSqnubI2HJR-kPFUlsWLYqX7DIc" />
 <link rel="alternate" hreflang="en" href="../how-to-grow-local-mobile-repair-shop/index.html" />
 <link rel="alternate" hreflang="hi" href="../how-to-grow-local-mobile-repair-shop-hin/index.html" />
 <link rel="alternate" hreflang="mr" href="../how-to-grow-a-local-mobile-repair-shop-in-maharashtra/index.html" />
 <link rel="alternate" hreflang="x-default" href="../how-to-grow-local-mobile-repair-shop/index.html" />
-<!-- GetButton.io widget -->
-<script type="text/javascript">
-    (function () {
-        var options = {
-            facebook: "1454623754798305", // Facebook page ID
-            call_to_action: "Namaste! Welcome to RepairMyMobile. ", // Call to action
-            position: "right", // Position may be 'right' or 'left'
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script>
+
 <style type="text/css">.site-title a { background: url(../src/wp-content/uploads/2020/07/rmm-logo.png) no-repeat !important; }</style>
 	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
 	<link rel="icon" href="../wp-content/uploads/2018/04/cropped-favicon-32x32.png" sizes="32x32" />
 <link rel="icon" href="../wp-content/uploads/2018/04/cropped-favicon-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../wp-content/uploads/2018/04/cropped-favicon-180x180.png" />
 <meta name="msapplication-TileImage" content="https://https://gurujibiharwale.in//wp-content/uploads/2018/04/cropped-favicon-270x270.png" />
-		<style type="text/css" id="wp-custom-css">
-			.entry-content a {
- color:#0000EE;
-}
-		</style>
-		
-<script data-ezscrex="false" data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-131022778-44";</script>
-<script data-ezscrex="false" data-cfasync="false" type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['e._setAccount', 'UA-131022778-44']);
-_gaq.push(['f._setAccount', 'UA-38339005-1']);
-_gaq.push(['e._setDomainName', 'https://gurujibiharwale.in/']);
-_gaq.push(['f._setDomainName', 'https://gurujibiharwale.in/']);
-_gaq.push(['e._setCustomVar',1,'template','old_site_gc',3]);
-_gaq.push(['e._setCustomVar',2,'t','126',3]);
-_gaq.push(['e._setCustomVar',3,'rid','0',2]);
-_gaq.push(['e._setCustomVar',4,'bra','mod1',3]);
-_gaq.push(['e._setAllowAnchor',true]);
-_gaq.push(['e._setSiteSpeedSampleRate', 10]);
-_gaq.push(['f._setCustomVar',1,'template','old_site_gc',3]);
-_gaq.push(['f._setCustomVar',2,'domain','https://gurujibiharwale.in/',3]);
-_gaq.push(['f._setSiteSpeedSampleRate', 20]);
-_gaq.push(['e._trackPageview']);
-_gaq.push(['f._trackPageview']);
 
-
-(function() {
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
- ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>
-<script type="text/javascript">var ezouid = "1";</script><base ><script type='text/javascript'>
-var ezoTemplate = 'old_site_gc';
-if(typeof ezouid == 'undefined')
-{
-    var ezouid = 'none';
-}
-var ezoFormfactor = '1';
-var ezo_elements_to_check = Array();
-</script><!-- START EZHEAD -->
-<script data-ezscrex="false" type='text/javascript'>
-var soc_app_id = '0';
-var did = 90360;
-var ezdomain = 'https://gurujibiharwale.in/';
-var ezoicSearchable = 1;
-</script>
-<!--{jquery}-->
-<!-- END EZHEAD -->
-<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":0,"ad_lazyload_version":0,"city":"New Delhi","country":"IN","days_since_last_visit":-1,"domain_id":90360,"domain_test_group":20200410,"engaged_time_visit":0,"ezcache_level":1,"forensiq_score":-1,"form_factor_id":1,"framework_id":1,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"metro_code":0,"page_ad_positions":"","page_view_count":5,"page_view_id":"7e37a546-8958-4fa6-4597-a7b11e25310e","position_selection_id":0,"postal_code":"110008","pv_event_count":0,"response_time_orig":1277,"serverid":"13.234.231.59:22137","state":"DL","t_epoch":1597422708,"template_id":126,"time_on_site_visit":0,"url":"https://https://gurujibiharwale.in//flash-file-tool/","user_id":0,"word_count":363,"worst_bad_word_level":0};var _ezExtraQueries = "&ez_orig=1";</script><script data-ezscrex='false' data-cfasync='false' type="text/javascript" src="../detroitchicago/rochester84dc.js?cb=191-1&amp;v=9" async></script>
-<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
-function create_ezolpl(pvID, rv) {
-    var d = new Date();
-    d.setTime(d.getTime() + (365*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    __ez.ck.setByCat("ezux_lpl_90360=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
-}
-function attach_ezolpl(pvID, rv) {
-    if (document.readyState === "complete") {
-        create_ezolpl(pvID, rv);
-    }
-    if(window.attachEvent) {
-        window.attachEvent("onload", create_ezolpl, pvID, rv);
-    } else {
-        if(window.onload) {
-            var curronload = window.onload;
-            var newonload = function(evt) {
-                curronload(evt);
-                create_ezolpl(pvID, rv);
-            };
-            window.onload = newonload;
-        } else {
-            window.onload = create_ezolpl.bind(null, pvID, rv);
-        }
-    }
-}
-
-__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["7e37a546-8958-4fa6-4597-a7b11e25310e", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
-</script></head>
+</head>
 <body class="page-template-default page page-id-3834 theme-genesis woocommerce-no-js custom-header header-image header-full-width content-sidebar genesis-breadcrumbs-visible genesis-footer-widgets-hidden elementor-default elementor-kit-14582 elementor-page elementor-page-3834"><div class="site-container"><ul class="genesis-skip-link"><li><a href="#genesis-nav-primary" class="screen-reader-shortcut"> Skip to primary navigation</a></li><li><a href="#genesis-content" class="screen-reader-shortcut"> Skip to main content</a></li><li><a href="#genesis-sidebar-primary" class="screen-reader-shortcut"> Skip to primary sidebar</a></li></ul><header class="site-header"><div class="wrap"><div class="title-area"><p class="site-title"><a href="../index.html">https://gurujibiharwale.in/</a></p><p class="site-description">One Stop Solution for Mobile Repair</p></div></div></header><nav class="nav-primary" aria-label="Main" id="genesis-nav-primary"><div class="wrap"><ul id="menu-primary" class="menu genesis-nav-menu menu-primary js-superfish"><li id="menu-item-4248" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4248"><a href="../index.html"><span >Home</span></a></li>
 <li id="menu-item-14828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14828"><a href="#"><span >Register Shop</span></a></li>
 <li id="menu-item-4249" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4249"><a href="#"><span >Solution</span></a>
@@ -1187,16 +1004,7 @@ var genesisSampleL10n = {"mainMenu":"Menu","subMenu":"Menu"};
 <script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2"></script>
 <script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/lib/swiper/swiper.min48f5.js?ver=5.3.6"></script>
 <script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/lib/share-link/share-link.min4315.js?ver=2.9.8"></script>
-<script type='text/javascript'>
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.8","urls":{"assets":"https:\/\/https://gurujibiharwale.in/\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":3834,"title":"Download%20Android%20Flash%20File%20%28Stock%20ROM%29%20-%20https://gurujibiharwale.in/","excerpt":"","featuredImage":"https:\/\/https://gurujibiharwale.in/\/wp-content\/uploads\/2020\/08\/logo200200.jpg"}};
-</script>
-<script type="text/javascript" src="../src/wp-content/plugins/elementor/assets/js/frontend.min4315.js?ver=2.9.8"></script>
-<script type='text/javascript' style='display:none;' async>
-__ez.queue.addFile('edmonton.html', '/detroitchicago/edmonton.webp?a=a&cb=1&shcb=34', true, ['/detroitchicago/minneapolis.js'], true, false, false, false);
-__ez.queue.addFile('jellyfish.html', '/porpoiseant/jellyfish.webp?a=a&cb=1&shcb=34', false, [], true, false, false, false);
-</script>
+    
+</body>
 
-<script>var _audins_dom="repairmymobile_in",_audins_did=90360;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "../../go.ezoic.net/detroitchicago/audinsddf7.js?cb=191-1");</script><noscript><div style="display:none;"><img src="../../pixel.quantserve.com/pixel/p-31iz6hfFutd164407.gif?labels=Domain.repairmymobile_in,DomainId.90360" border="0" height="1" width="1" alt="Quantcast"/></div></noscript><noscript><img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=20015427&amp;cv=2.0&amp;cj=1"/></noscript>
-<script type='text/javascript' data-cfasync='false'></script></body>
-<!-- Mirrored from https://gurujibiharwale.in//flash-file-tool/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Aug 2020 16:35:44 GMT -->
 </html>
